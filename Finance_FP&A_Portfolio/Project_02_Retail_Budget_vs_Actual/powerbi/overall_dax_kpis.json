@@ -1,0 +1,19 @@
+{
+  "Total Budget Revenue": 5931976900.0,
+  "Total Actual Revenue": 6047961200.0,
+  "Revenue Variance": 115984300.0,
+  "Revenue Variance %": 0.019552385647354762,
+  "Total Budget Expenses": 5504169100.0,
+  "Total Actual Expenses": 5651377800.0,
+  "Expense Variance": 147208700.0,
+  "Expense Variance %": 0.026744945027215826,
+  "Budgeted Profit": 427807800.0,
+  "Actual Profit": 396583400.0,
+  "Profit Variance": -31224400.0,
+  "Actual Profit Margin": 0.06557307279021565,
+  "Budget Profit Margin": 0.07211892547996941,
+  "Revenue Achievement %": 1.0195523856473547,
+  "Cost Overrun Alert": "Cost Overrun",
+  "Profitability Status": "Below Budget",
+  "Variance Status": "Unfavourable"
+}
