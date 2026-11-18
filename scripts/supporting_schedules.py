@@ -6,8 +6,8 @@ Extracts and summarizes Working Capital, PP&E, and Debt schedules for reporting.
 import pandas as pd
 import openpyxl
 
-MODEL_PATH = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/model/Titan_3Statement_DCF_Model.xlsx'
-OUTPUT_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/outputs'
+MODEL_PATH = 'model/Titan_3Statement_DCF_Model.xlsx'
+OUTPUT_DIR = 'outputs'
 
 wb = openpyxl.load_workbook(MODEL_PATH, data_only=True)
 

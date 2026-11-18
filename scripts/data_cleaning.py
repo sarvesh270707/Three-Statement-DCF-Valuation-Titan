@@ -8,8 +8,8 @@ import numpy as np
 import os
 import datetime
 
-OUTPUT_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed'
-SOURCE_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/source_register'
+OUTPUT_DIR = 'data/processed'
+SOURCE_DIR = 'data/source_register'
 
 # Load historical extracts
 df_pnl = pd.read_csv(f'{OUTPUT_DIR}/income_statement_historical.csv', index_col=0)

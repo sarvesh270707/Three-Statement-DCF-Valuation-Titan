@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 
 # Load parameters
-with open('Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed/model_assumptions.json', 'r') as f:
+with open('data/processed/model_assumptions.json', 'r') as f:
     scenarios = json.load(f)
 
 base = scenarios['Base']
@@ -127,7 +127,7 @@ summary_data = {
 }
 
 df_summary = pd.DataFrame(summary_data)
-df_summary.to_csv('Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/outputs/valuation_summary.csv', index=False)
+df_summary.to_csv('outputs/valuation_summary.csv', index=False)
 
 print("--- VALUATION SUMMARY TABLE ---")
 print(df_summary.to_string())
@@ -150,6 +150,6 @@ for w_val in wacc_steps:
         p_s = eq_s / shares_cr
         sens_matrix.loc[f"WACC {w_val*100:.2f}%", f"{m_val:.1f}x EBITDA"] = round(p_s, 2)
 
-sens_matrix.to_csv('Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/outputs/sensitivity_matrix_exit_multiple.csv')
+sens_matrix.to_csv('outputs/sensitivity_matrix_exit_multiple.csv')
 print("\n--- 5x5 SENSITIVITY MATRIX (WACC vs Exit Multiple) ---")
 print(sens_matrix)

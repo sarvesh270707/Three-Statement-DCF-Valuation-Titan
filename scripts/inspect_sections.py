@@ -1,6 +1,6 @@
 import openpyxl
 
-wb = openpyxl.load_workbook('Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/raw/Titan_Company_Screener_Raw.xlsx', data_only=True)
+wb = openpyxl.load_workbook('data/raw/Titan_Company_Screener_Raw.xlsx', data_only=True)
 ws = wb['Data Sheet']
 
 sections = []

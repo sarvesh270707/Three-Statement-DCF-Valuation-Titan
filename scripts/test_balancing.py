@@ -7,7 +7,7 @@ import json
 import pandas as pd
 import numpy as np
 
-OUTPUT_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed'
+OUTPUT_DIR = 'data/processed'
 
 with open(f'{OUTPUT_DIR}/model_assumptions.json', 'r') as f:
     scenarios = json.load(f)

@@ -8,9 +8,9 @@ import pandas as pd
 import json
 import os
 
-RAW_PATH = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/raw/Titan_Company_Screener_Raw.xlsx'
-OUTPUT_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed'
-SOURCE_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/source_register'
+RAW_PATH = 'data/raw/Titan_Company_Screener_Raw.xlsx'
+OUTPUT_DIR = 'data/processed'
+SOURCE_DIR = 'data/source_register'
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(SOURCE_DIR, exist_ok=True)

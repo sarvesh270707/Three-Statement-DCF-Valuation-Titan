@@ -9,8 +9,8 @@ from openpyxl.utils import get_column_letter
 import pandas as pd
 import os
 
-PROCESSED_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed'
-OUTPUT_MODEL_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/model'
+PROCESSED_DIR = 'data/processed'
+OUTPUT_MODEL_DIR = 'model'
 os.makedirs(OUTPUT_MODEL_DIR, exist_ok=True)
 FILE_PATH = os.path.join(OUTPUT_MODEL_DIR, 'Titan_3Statement_DCF_Model.xlsx')
 

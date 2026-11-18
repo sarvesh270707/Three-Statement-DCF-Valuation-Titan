@@ -9,7 +9,7 @@ from openpyxl.utils import get_column_letter
 import json
 import os
 
-OUTPUT_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/model'
+OUTPUT_DIR = 'model'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 FILE_PATH = os.path.join(OUTPUT_DIR, 'Titan_3Statement_DCF_Model.xlsx')
 
@@ -60,7 +60,7 @@ FMT_MULTIPLE = "0.0\"x\""
 print("Initializing Excel model build...")
 
 # Load historical standardized datasets
-PROCESSED_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed'
+PROCESSED_DIR = 'data/processed'
 import pandas as pd
 df_pnl = pd.read_csv(f'{PROCESSED_DIR}/income_statement_standardized.csv', index_col=0)
 df_bs = pd.read_csv(f'{PROCESSED_DIR}/balance_sheet_standardized.csv', index_col=0)

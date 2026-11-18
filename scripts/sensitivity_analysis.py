@@ -9,10 +9,10 @@ import pandas as pd
 import openpyxl
 import os
 
-MODEL_PATH = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/model/Titan_3Statement_DCF_Model.xlsx'
-OUTPUT_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/outputs'
-CHARTS_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/outputs/valuation_charts'
-ASSETS_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/assets'
+MODEL_PATH = 'model/Titan_3Statement_DCF_Model.xlsx'
+OUTPUT_DIR = 'outputs'
+CHARTS_DIR = 'outputs/valuation_charts'
+ASSETS_DIR = 'assets'
 
 os.makedirs(CHARTS_DIR, exist_ok=True)
 os.makedirs(ASSETS_DIR, exist_ok=True)

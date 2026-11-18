@@ -71,7 +71,7 @@ SCENARIOS = {
     }
 }
 
-OUTPUT_FILE = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed/model_assumptions.json'
+OUTPUT_FILE = 'data/processed/model_assumptions.json'
 
 with open(OUTPUT_FILE, 'w') as f:
     json.dump(SCENARIOS, f, indent=2)

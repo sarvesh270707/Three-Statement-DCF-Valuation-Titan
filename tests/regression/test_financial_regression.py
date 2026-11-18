@@ -12,7 +12,7 @@ def test_titan_valuation_regression(titan_workbook):
     assert round(gordon_price, 2) == 368.40, f"Gordon Growth Price drifted from 368.40: {gordon_price}"
 
 def test_titan_historical_performance_regression():
-    p_is = "Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed/income_statement_standardized.csv"
+    p_is = "data/processed/income_statement_standardized.csv"
     df = pd.read_csv(p_is)
     row_rev = df[df.iloc[:, 0].str.contains("Total Revenue|Revenue from Operations", case=False, na=False)]
     assert not row_rev.empty

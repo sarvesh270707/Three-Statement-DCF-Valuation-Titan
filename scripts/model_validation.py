@@ -8,8 +8,10 @@ import os
 import pandas as pd
 import datetime
 
-MODEL_PATH = os.path.abspath('Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/model/Titan_3Statement_DCF_Model.xlsx')
-OUTPUT_DIR = os.path.abspath('Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/outputs')
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(SCRIPT_DIR)
+MODEL_PATH = os.path.join(ROOT_DIR, 'model', 'Titan_3Statement_DCF_Model.xlsx')
+OUTPUT_DIR = os.path.join(ROOT_DIR, 'outputs')
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 print(f"Opening Excel workbook for native recalculation:\n{MODEL_PATH}")

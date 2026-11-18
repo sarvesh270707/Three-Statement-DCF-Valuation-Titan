@@ -1,10 +1,10 @@
 # Titan Company Ltd. — Three-Statement Financial Model & DCF Valuation
 ## Institutional Equity Valuation & Corporate Financial Analysis Suite
 
-[![Excel Model](https://img.shields.io/badge/Financial_Model-17_Worksheets-1D6F42?style=for-the-badge&logo=microsoftexcel&logoColor=white)](Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/model/Titan_3Statement_DCF_Model.xlsx)
-[![Accounting Balance](https://img.shields.io/badge/Balance_Sheet_Deviation-₹0.00_Cr_(Zero_Plugs)-00C853?style=for-the-badge)](Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/documentation/model_audit_report.md)
-[![Python Automation](https://img.shields.io/badge/Python-3.12.10_Automation-3776AB?style=for-the-badge&logo=python&logoColor=white)](Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/)
-[![Valuation Horizon](https://img.shields.io/badge/Horizon-10Y_Historical_%2B_5Y_Forecast-FF6F00?style=for-the-badge)](Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/documentation/methodology.md)
+[![Excel Model](https://img.shields.io/badge/Financial_Model-17_Worksheets-1D6F42?style=for-the-badge&logo=microsoftexcel&logoColor=white)](model/Titan_3Statement_DCF_Model.xlsx)
+[![Accounting Balance](https://img.shields.io/badge/Balance_Sheet_Deviation-₹0.00_Cr_(Zero_Plugs)-00C853?style=for-the-badge)](documentation/model_audit_report.md)
+[![Python Automation](https://img.shields.io/badge/Python-3.12.10_Automation-3776AB?style=for-the-badge&logo=python&logoColor=white)](scripts/)
+[![Valuation Horizon](https://img.shields.io/badge/Horizon-10Y_Historical_%2B_5Y_Forecast-FF6F00?style=for-the-badge)](documentation/methodology.md)
 [![Audit Status](https://img.shields.io/badge/Audit_Check-100%25_VERIFIED-635BFF?style=for-the-badge)](DCF_VALIDATION_REPORT.md)
 
 A rigorous, institutional-grade Three-Statement Financial Model and Discounted Cash Flow (DCF) Valuation of **Titan Company Limited** (NSE: `TITAN` | BSE: `500114`), India's leading consumer lifestyle and jewellery conglomerate under the Tata Group.
@@ -18,27 +18,27 @@ Spanning **10 years of audited historical financial statements (FY17–FY26)** a
 ```mermaid
 flowchart TD
     subgraph Statements["Integrated 3-Statement Architecture"]
-        IS[Income Statement: FY17-FY31E] --> BS[Balance Sheet: Zero Deviation]
-        BS --> CFS[Cash Flow Statement: Closing Cash Bridge]
+        IS["Income Statement: FY17-FY31E"] --> BS["Balance Sheet: Zero Deviation"]
+        BS --> CFS["Cash Flow Statement: Closing Cash Bridge"]
         CFS --> BS
     end
 
     subgraph Schedules["Granular Supporting Schedules"]
-        WC[Working Capital Schedule: DSO / DIO / DPO]
-        PPE[PP&E & Depreciation Schedule: Ind AS 116]
-        DEBT[Debt Amortization & Interest Schedule]
+        WC["Working Capital Schedule: DSO / DIO / DPO"]
+        PPE["PP&E & Depreciation Schedule: Ind AS 116"]
+        DEBT["Debt Amortization & Interest Schedule"]
         WC --> BS
         PPE --> BS
         DEBT --> BS
     end
 
     subgraph Valuation["Dual Terminal DCF Valuation Engine"]
-        UFCF[Unlevered Free Cash Flow: NOPAT - CapEx - ΔNWC]
-        WACC[WACC: 14.43% | Rf: 7.00% | Beta: 1.15 | MRP: 7.00%]
-        UFCF --> DCF[Discounted Cash Flows (FY27E-FY31E)]
+        UFCF["Unlevered Free Cash Flow: NOPAT - CapEx - ΔNWC"]
+        WACC["WACC: 14.43% | Rf: 7.00% | Beta: 1.15 | MRP: 7.00%"]
+        UFCF --> DCF["Discounted Cash Flows (FY27E-FY31E)"]
         WACC --> DCF
-        DCF --> ExitMult[Exit Multiple Method: ₹3,257.67 / share]
-        DCF --> Gordon[Gordon Growth Method: ₹368.40 / share]
+        DCF --> ExitMult["Exit Multiple Method: ₹3,257.67 / share"]
+        DCF --> Gordon["Gordon Growth Method: ₹368.40 / share"]
     end
 ```
 
@@ -129,18 +129,18 @@ Implied Share Price (₹) across discount rate and multiple bands:
 
 ### 1. Execute the Model Build & DCF Engine
 ```bash
-python Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/financial_model.py
-python Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/dcf_valuation.py
+python scripts/financial_model.py
+python scripts/dcf_valuation.py
 ```
 
 ### 2. Generate 5x5 Sensitivity Grids
 ```bash
-python Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/sensitivity_analysis.py
+python scripts/sensitivity_analysis.py
 ```
 
 ### 3. Run the Automated Accounting Audit
 ```bash
-python Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/model_validation.py
+python scripts/model_validation.py
 ```
 
 ---

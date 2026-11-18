@@ -6,7 +6,7 @@ Computes historical CAGR, margins, working capital cycle, turnover, and solvency
 import pandas as pd
 import numpy as np
 
-OUTPUT_DIR = 'Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed'
+OUTPUT_DIR = 'data/processed'
 
 df_pnl = pd.read_csv(f'{OUTPUT_DIR}/income_statement_standardized.csv', index_col=0)
 df_bs = pd.read_csv(f'{OUTPUT_DIR}/balance_sheet_standardized.csv', index_col=0)
