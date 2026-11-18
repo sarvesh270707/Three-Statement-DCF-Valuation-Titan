@@ -1,87 +1,151 @@
-# Finance & FP&A Engineering Portfolio
-## Project 01: Titan Company Ltd. Three-Statement Financial Model & DCF Valuation
-## Project 02: Multi-Channel Retail Budget vs. Actual Variance & Profitability Dashboard
+# Titan Company Ltd. — Three-Statement Financial Model & DCF Valuation
+## Institutional Equity Valuation & Corporate Financial Analysis Suite
+
+[![Excel Model](https://img.shields.io/badge/Financial_Model-17_Worksheets-1D6F42?style=for-the-badge&logo=microsoftexcel&logoColor=white)](Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/model/Titan_3Statement_DCF_Model.xlsx)
+[![Accounting Balance](https://img.shields.io/badge/Balance_Sheet_Deviation-₹0.00_Cr_(Zero_Plugs)-00C853?style=for-the-badge)](Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/documentation/model_audit_report.md)
+[![Python Automation](https://img.shields.io/badge/Python-3.12.10_Automation-3776AB?style=for-the-badge&logo=python&logoColor=white)](Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/)
+[![Valuation Horizon](https://img.shields.io/badge/Horizon-10Y_Historical_%2B_5Y_Forecast-FF6F00?style=for-the-badge)](Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/documentation/methodology.md)
+[![Audit Status](https://img.shields.io/badge/Audit_Check-100%25_VERIFIED-635BFF?style=for-the-badge)](DCF_VALIDATION_REPORT.md)
+
+A rigorous, institutional-grade Three-Statement Financial Model and Discounted Cash Flow (DCF) Valuation of **Titan Company Limited** (NSE: `TITAN` | BSE: `500114`), India's leading consumer lifestyle and jewellery conglomerate under the Tata Group.
+
+Spanning **10 years of audited historical financial statements (FY17–FY26)** and a **5-year explicit forecast horizon (FY27E–FY31E)**, the model integrates dynamic scenario switching (Bear, Base, Bull), granular working capital schedules, Ind AS 116 lease accounting roll-forwards, debt amortization schedules, and dual-methodology terminal valuation.
 
 ---
 
-## 🌟 Master Portfolio Overview
+## 🏛️ Executive Summary & Key Valuation Findings
 
-This repository hosts a production-grade corporate finance, equity valuation, and financial planning & analysis (FP&A) portfolio developed with institutional rigor, zero accounting plugs, and complete mathematical verification.
+```mermaid
+flowchart TD
+    subgraph Statements["Integrated 3-Statement Architecture"]
+        IS[Income Statement: FY17-FY31E] --> BS[Balance Sheet: Zero Deviation]
+        BS --> CFS[Cash Flow Statement: Closing Cash Bridge]
+        CFS --> BS
+    end
 
-The primary master architecture is housed under [`Finance_FP&A_Portfolio/`](Finance_FP&A_Portfolio/README.md):
+    subgraph Schedules["Granular Supporting Schedules"]
+        WC[Working Capital Schedule: DSO / DIO / DPO]
+        PPE[PP&E & Depreciation Schedule: Ind AS 116]
+        DEBT[Debt Amortization & Interest Schedule]
+        WC --> BS
+        PPE --> BS
+        DEBT --> BS
+    end
 
-### 1. [Project 01: Titan Company Ltd. Three-Statement Model & DCF Valuation](Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/)
-- **10-Year Audited Historicals (FY17–FY26)** + **5-Year Explicit Forecasts (FY27E–FY31E)**.
-- **17-Worksheet Institutional Excel Model** (`Titan_3Statement_DCF_Model.xlsx`) featuring dynamic scenario switching (Bear, Base, Bull).
-- **100% Reconciled Balance Sheet**: **₹0.00 Cr deviation across all 16 annual periods**.
-- **Dual-Methodology DCF Valuation**:
-  - Exit Multiple (35.0x FY31E EBITDA): **₹3,257.67 / share**
-  - Gordon Growth (5.5% terminal growth, normalized reinvestment): **₹368.40 / share**
-- **Automated Validation**: COM automation audit script (`model_validation.py`), dual 5x5 sensitivity matrices, football field charts, and 5 exhaustive institutional research documents.
-
-### 2. [Project 02: Retail Budget vs. Actual Variance & Profitability Dashboard](Finance_FP&A_Portfolio/Project_02_Retail_Budget_vs_Actual/)
-- **Production Star Schema Data Model**: 1,728 grain records spanning 24 months (CY2024–CY2025), 4 regions, 6 categories, and 3 distribution channels.
-- **Compiled Microsoft Power BI Platform** (`Retail_BvA_Dashboard.pbix`): 3-page executive reporting suite (Executive Summary, Variance Decomposition Waterfall, Unit Profitability).
-- **17 Production DAX Measures**: Complete time intelligence, volume/price/mix variance engines, and retail operating KPIs (AOV, ASP, Conversion Rate).
-- **Independent Validation**: 8 automated data quality gates and zero-defect DAX cross-verification against Python calculations.
-
----
-
-## 📂 Repository Directory Tree
-
-```
-DCF-Valuation-Model/
-│
-├── Finance_FP&A_Portfolio/                     # Master Enterprise Portfolio Directory
-│   ├── README.md                               # Comprehensive Master Portfolio Readme
-│   │
-│   ├── Project_01_Titan_Three_Statement_DCF/   # Project 01: Titan Equity Valuation Suite
-│   │   ├── data/                               # Raw & processed audited financial statements
-│   │   ├── model/                              # Titan_3Statement_DCF_Model.xlsx (17 sheets)
-│   │   ├── scripts/                            # 9 Python modeling & validation scripts
-│   │   ├── documentation/                      # 5 Research & audit reports (methodology, thesis)
-│   │   ├── outputs/                            # CSV summaries, sensitivity matrices, charts
-│   │   └── assets/                             # High-res model previews & football field charts
-│   │
-│   ├── Project_02_Retail_Budget_vs_Actual/     # Project 02: Retail FP&A & Power BI Suite
-│   │   ├── data/                               # Retail_Sector_Financial_Analysis.xlsx (Star Schema)
-│   │   ├── powerbi/                            # Retail_BvA_Dashboard.pbix (3 Pages, 17 DAX)
-│   │   ├── scripts/                            # Dataset generation & DAX verification scripts
-│   │   ├── documentation/                      # Methodology, insights, dashboard guide, data QA
-│   │   └── assets/                             # High-res executive dashboard screenshots
-│   │
-│   └── shared/                                 # Cross-project requirements & disclosures
-│       ├── requirements.txt                    # Master Python package dependencies
-│       ├── validation_summary.md               # Audit gates & reconciliation proof
-│       └── source_disclosures.md               # Data lineage & compliance disclosures
-│
-├── data/                                       # Historical seed data
-├── output/                                     # Legacy outputs
-├── assests/                                    # Legacy visual assets
-└── README.md                                   # Root Navigation & Summary
+    subgraph Valuation["Dual Terminal DCF Valuation Engine"]
+        UFCF[Unlevered Free Cash Flow: NOPAT - CapEx - ΔNWC]
+        WACC[WACC: 14.43% | Rf: 7.00% | Beta: 1.15 | MRP: 7.00%]
+        UFCF --> DCF[Discounted Cash Flows (FY27E-FY31E)]
+        WACC --> DCF
+        DCF --> ExitMult[Exit Multiple Method: ₹3,257.67 / share]
+        DCF --> Gordon[Gordon Growth Method: ₹368.40 / share]
+    end
 ```
 
+### 1. Dual Valuation Methodology Comparison
+
+| Valuation Framework | Implied Target / Share | Enterprise Value (EV) | Implied Equity Value | Valuation Driver / Multiple |
+| :--- | :--- | :--- | :--- | :--- |
+| **Exit Multiple Method (Baseline)** | **₹3,257.67** | **₹3,14,354 Cr** | **₹2,89,156 Cr** | **35.0x EV/EBITDA** (Luxury retail premium) |
+| **Gordon Growth Method** | **₹368.40** | **₹57,908 Cr** | **₹32,710 Cr** | **5.5% Terminal Growth** ($WACC = 14.43\%$) |
+
+### 2. Forensic Proof: The 8.84x Valuation Disparity
+The model mathematically reconciles the divergence between Gordon Growth and Exit Multiple valuation:
+1. **Multiple Compression in Gordon Growth**: Under steady-state Gordon Growth with $WACC = 14.43\%$, $g = 5.5\%$, and $ROIC = 20.0\%$, the implied EV/NOPAT multiple compresses to $\frac{1 - g/ROIC}{WACC - g} = 8.12\text{x}$, which corresponds to only **5.55x EV/EBITDA** — far lower than Titan's market transaction multiple of 35.0x.
+2. **Fixed Net Debt Leverage Magnification**: Titan carries net debt of ₹25,198 Cr (inclusive of gold metal loans and lease liabilities). This fixed debt absorbs **43.5% of Gordon Growth Enterprise Value**, reducing residual equity value by 8.84x compared to Exit Multiple equity value.
+
 ---
 
-## 🚀 Quick Execution Guide
+## 📊 Balance Sheet Reconciliation Proof (Zero Plugs)
 
+Every period adheres strictly to the fundamental accounting equation:
+$$\text{Total Assets} = \text{Total Liabilities} + \text{Shareholders' Equity} \quad (\Delta = ₹0.00\text{ Cr})$$
+
+| Metric (₹ Cr) | FY22 | FY23 | FY24 | FY25 | FY26 | FY27E | FY28E | FY29E | FY30E | FY31E |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Total Assets** | 31,643 | 39,240 | 48,150 | 56,800 | 62,621 | 71,450 | 81,600 | 93,250 | 1,06,580 | 1,21,800 |
+| **Total Liabilities & Equity** | 31,643 | 39,240 | 48,150 | 56,800 | 62,621 | 71,450 | 81,600 | 93,250 | 1,06,580 | 1,21,800 |
+| **Reconciliation Variance** | **₹0.00** | **₹0.00** | **₹0.00** | **₹0.00** | **₹0.00** | **₹0.00** | **₹0.00** | **₹0.00** | **₹0.00** | **₹0.00** |
+| **Audit Status** | **PASS** | **PASS** | **PASS** | **PASS** | **PASS** | **PASS** | **PASS** | **PASS** | **PASS** | **PASS** |
+
+---
+
+## 🗂️ Repository Directory Architecture
+
+```
+Three-Statement-DCF-Valuation-Titan/
+│
+├── README.md                                  # Institutional Model Documentation (This File)
+├── DCF_VALIDATION_REPORT.md                   # Independent Audit & Valuation Proof
+├── FINANCIAL_MODEL_AUDIT.md                   # COM-based Accounting Verification Report
+│
+└── Finance_FP&A_Portfolio/
+    └── Project_01_Titan_Three_Statement_DCF/  # Dedicated Titan Valuation Suite
+        ├── model/
+        │   └── Titan_3Statement_DCF_Model.xlsx # Master 17-Sheet Integrated Financial Model
+        ├── data/
+        │   ├── raw/                           # Audited BSE/NSE Annual Report extracts
+        │   ├── processed/                     # Standardized P&L, BS, CFS (FY17–FY26)
+        │   └── source_register/               # 310 Line-item audit provenance tracker
+        ├── scripts/
+        │   ├── data_extraction.py             # Section-indexed PDF/filing extractor
+        │   ├── data_cleaning.py               # Ind AS 116 alignment and normalisation
+        │   ├── historical_financials.py       # 10-year trend and DuPont ratio engine
+        │   ├── assumptions.py                 # Bear / Base / Bull scenario operational drivers
+        │   ├── financial_model.py             # Integrated 3-statement forecast engine
+        │   ├── supporting_schedules.py        # WC, PP&E, and Debt schedules
+        │   ├── dcf_valuation.py               # UFCF, WACC, and dual terminal DCF valuation
+        │   ├── sensitivity_analysis.py        # Dual 5x5 WACC vs Multiple grids
+        │   └── model_validation.py            # Automated Excel COM accounting audit
+        ├── documentation/
+        │   ├── methodology.md                 # Institutional equity research methodology
+        │   ├── assumptions_register.md        # Detailed operational driver justifications
+        │   ├── data_sources.md                # Regulatory filing lineage & notes
+        │   ├── model_audit_report.md          # Zero-plug attestation report
+        │   └── investment_thesis.md           # Equity research investment recommendation
+        └── outputs/
+            ├── valuation_summary.csv          # Baseline valuation parameters and bridges
+            ├── sensitivity_matrix.csv         # 5x5 WACC vs Terminal Multiple grid
+            └── model_validation_report.csv    # Period-by-period audit proof
+```
+
+---
+
+## 🎛️ Dynamic 5x5 Sensitivity Matrix (WACC vs. Exit Multiple)
+
+Implied Share Price (₹) across discount rate and multiple bands:
+
+| WACC \ Multiple | 30.0x | 32.5x | 35.0x (Base) | 37.5x | 40.0x |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| **13.50%** | ₹3,012 | ₹3,248 | ₹3,485 | ₹3,721 | ₹3,958 |
+| **14.00%** | ₹2,895 | ₹3,123 | ₹3,350 | ₹3,578 | ₹3,806 |
+| **14.43% (Base)** | ₹2,815 | ₹3,036 | **₹3,257.67** | ₹3,479 | ₹3,700 |
+| **15.00%** | ₹2,714 | ₹2,927 | ₹3,141 | ₹3,354 | ₹3,568 |
+| **15.50%** | ₹2,628 | ₹2,835 | ₹3,041 | ₹3,248 | ₹3,455 |
+
+---
+
+## 🚀 How to Run the Model & Audit Automations
+
+### 1. Execute the Model Build & DCF Engine
 ```bash
-# Clone the repository
-git clone https://github.com/sarvesh270707/Three-Statement-DCF-Valuation-Titan.git
-cd Three-Statement-DCF-Valuation-Titan
+python Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/financial_model.py
+python Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/dcf_valuation.py
+```
 
-# Install dependencies
-pip install -r Finance_FP&A_Portfolio/shared/requirements.txt
+### 2. Generate 5x5 Sensitivity Grids
+```bash
+python Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/sensitivity_analysis.py
+```
 
-# Run Project 01 Excel COM Model Audit
+### 3. Run the Automated Accounting Audit
+```bash
 python Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/scripts/model_validation.py
-
-# Run Project 02 Data Quality Audit & DAX Cross-Validation
-python Finance_FP&A_Portfolio/Project_02_Retail_Budget_vs_Actual/scripts/data_validation.py
-python Finance_FP&A_Portfolio/Project_02_Retail_Budget_vs_Actual/scripts/independent_dax_validation.py
 ```
 
 ---
 
-## 📊 Live Portfolio Link
-The web portfolio integration is hosted live at [sarveshworks.vercel.app](https://sarveshworks.vercel.app).
+## 🔗 Related Portfolio Repositories
+
+- **[Retail-Budget-vs-Actual-PowerBI](https://github.com/sarvesh270707/Retail-Budget-vs-Actual-PowerBI)**: Multi-Channel Retail Budget vs. Actual Variance & Profitability Power BI Analytics Suite.
+- **[Universal-Multi-Company-Valuation-Engine](https://github.com/sarvesh270707/Universal-Valuation-Engine)**: Extensible multi-sector financial valuation engine covering 21 industries (In Active Development).

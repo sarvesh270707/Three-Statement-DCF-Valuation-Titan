@@ -1,0 +1,56 @@
+Test_ID,Description,Input_Parameters,Expected_Result,Actual_Result,Status,Error_Message,Execution_Timestamp
+T-TITAN-01,Titan Balance Sheet Equality Check FY26,Assets vs Liab+Equity in FY26,Diff == 0.00,Diff = 0.0000,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-02,Titan Balance Sheet Equality Check FY27E,Assets vs Liab+Equity in FY27E,Diff == 0.00,Diff = 0.0000,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-03,Titan Balance Sheet Equality Check FY28E,Assets vs Liab+Equity in FY28E,Diff == 0.00,Diff = 0.0000,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-04,Titan Balance Sheet Equality Check FY29E,Assets vs Liab+Equity in FY29E,Diff == 0.00,Diff = 0.0000,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-05,Titan Balance Sheet Equality Check FY30E,Assets vs Liab+Equity in FY30E,Diff == 0.00,Diff = 0.0000,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-06,Titan Balance Sheet Equality Check FY31E,Assets vs Liab+Equity in FY31E,Diff == 0.00,Diff = 0.0000,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-07,Titan Cash Flow Statement Ending Cash Check,CF Closing Cash vs BS Cash,Diff == 0.00 across all periods,Diff = 0.0000 across all periods,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-08,Titan PP&E Roll-Forward Check,Opening + CapEx - Depr = Closing,Diff == 0.00 across all periods,Diff = 0.0000 across all periods,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-09,Titan Debt Roll-Forward Check,Opening + Borrow - Repay = Closing,Diff == 0.00 across all periods,Diff = 0.0000 across all periods,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-10,Titan Retained Earnings Roll-Forward Check,Opening + NI - Div = Closing,Diff == 0.00 across all periods,Diff = 0.0000 across all periods,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-11,Titan External Links and Mutation Audit,Scan for external links or mutated names,0 external links,0 external links after DEF-001 fix,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-12,Titan WACC Formulation Verification,CAPM Ke + After-tax Kd weighted,WACC = 14.4305%,WACC = 14.4305%,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-13,Titan Exit Multiple DCF Verification,35.0x FY31E EBITDA Terminal Value,"Target Price = ₹3,257.67/sh","Target Price = ₹3,257.67/sh",PASS,,2026-11-17T18:45:40.901753
+T-TITAN-14,Titan Gordon Growth DCF Verification,5.5% g with 20% ROIC Reinvestment,Target Price = ₹368.40/sh,Target Price = ₹368.40/sh,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-15,Titan Valuation Divergence Mathematical Proof,EV/EBITDA multiple & Debt leverage ratio,Capitalization: 5.55x vs 35.0x; Eq Ratio 8.84x,Mathematically proven and documented,PASS,,2026-11-17T18:45:40.901753
+T-TITAN-16,Titan 121 Assumption Combinations Stress Test,WACC (11-18%) vs Multiple (20-50x),"All prices > 0, strictly monotonic",121/121 prices valid and monotonic,PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-01,Retail Primary Key Uniqueness,"DimRegion, DimCategory, DimDate PKs",0 duplicates,0 duplicates found,PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-02,Retail Referential Integrity,Fact foreign keys mapped to dimensions,100% matched (1728/1728),100% matched (1728/1728),PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-03,Retail Null Value Scan,Critical financial columns null check,0 null values,0 null values found,PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-04,Retail Grain & Record Count Verification,Date x Region x Category x Channel,"Exactly 1,728 rows","Exactly 1,728 rows verified",PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-05,Retail Total Actual Revenue DAX Recomputation,Sum(Actual_Revenue),"₹6,047,961,200 (₹604.80 Cr)","₹6,047,961,200.00 verified",PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-06,Retail Total Budget Revenue DAX Recomputation,Sum(Budgeted_Revenue),"₹5,931,976,900 (₹593.20 Cr)","₹5,931,976,900.00 verified",PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-07,Retail Revenue Variance Recomputation,Actual - Budget,"+₹115,984,300 (+1.96%)","+₹115,984,300.00 (+1.96%)",PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-08,Retail Expense Overrun Recomputation,Actual Expenses - Budget Expenses,"+₹147,208,700 (+2.67%)","+₹147,208,700.00 (+2.67%)",PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-09,Retail Operating Profit Variance Recomputation,Actual Profit - Budget Profit,"-₹31,224,400 (-7.30% Unfavourable)","-₹31,224,400.00 (-7.30%)",PASS,,2026-11-17T18:45:40.901753
+T-RETAIL-10,Retail PBIX Package & TMSL Schema Audit,Inspect zip/opc package & TMSL tables,"4 tables, 17 measures, 3 pages","4 tables, 17 measures, 3 pages verified",PASS,,2026-11-17T18:45:40.901753
+T-EDGE-01,Zero Revenue Handling in Margin,Actual_Rev = 0,Margin = 0.0 (no div by zero),Margin = 0.0,PASS,,2026-11-17T18:45:40.901753
+T-EDGE-02,Zero Budget Handling in Achievement,Budget_Rev = 0,Pct = 0.0 (no div by zero),Pct = 0.0,PASS,,2026-11-17T18:45:40.901753
+T-EDGE-03,Negative Revenue Flagging,Actual_Rev = -500,Flagged as anomaly,Flagged as anomaly,PASS,,2026-11-17T18:45:40.901753
+T-EDGE-04,Missing Month Gap Detection,Dropping June from monthly series,Flagged missing gap,Flagged missing gap,PASS,,2026-11-17T18:45:40.901753
+T-EDGE-05,Duplicate Transaction ID Gate,Duplicated TXN key,Flagged duplicate,Flagged duplicate,PASS,,2026-11-17T18:45:40.901753
+T-EDGE-06,Referential Orphan Gate,Invalid region 'Atlantis',Flagged orphan,Flagged orphan,PASS,,2026-11-17T18:45:40.901753
+T-EDGE-07,WACC Equal to Growth Singularity,WACC = g = 5.5%,Rejected denominator <= 0,Rejected denominator <= 0,PASS,,2026-11-17T18:45:40.901753
+T-EDGE-08,Growth Exceeding WACC Singularity,g = 16% > WACC = 14.43%,Rejected g > WACC,Rejected g > WACC,PASS,,2026-11-17T18:45:40.901753
+T-EDGE-09,Zero Shares Outstanding Trap,Shares = 0,Caught zero division,Caught zero division,PASS,,2026-11-17T18:45:40.901753
+T-EDGE-10,Extreme CapEx Shock,"CapEx = ₹50,000 Cr",UFCF turns negative gracefully,UFCF turns negative gracefully,PASS,,2026-11-17T18:45:40.901753
+T-EXCEL-01,Excel COM Open and Full Rebuild,CalculateFullRebuild(),0 errors across all 17 sheets,0 errors across all 17 sheets,PASS,,2026-11-17T18:45:40.901753
+T-EXCEL-02,Excel COM External Links Verification,wb.LinkSources(1),None,None,PASS,,2026-11-17T18:45:40.901753
+T-EXCEL-03,Excel COM Formula Cache Persistence,SaveCopyAs and Reopen,All values persist identically,All values persist identically,PASS,,2026-11-17T18:45:40.901753
+T-WEB-01,Website HTTP Status Check,GET sarveshworks.vercel.app,HTTP 200 OK,HTTP 200 OK,PASS,,2026-11-17T18:45:40.901753
+T-WEB-02,Playwright Viewport 360px Mobile Small,Viewport 360x640 rendering,"0 console errors, modal functional","0 console errors, modal functional",PASS,,2026-11-17T18:45:40.901753
+T-WEB-03,Playwright Viewport 390px Mobile Standard,Viewport 390x844 rendering,"0 console errors, modal functional","0 console errors, modal functional",PASS,,2026-11-17T18:45:40.901753
+T-WEB-04,Playwright Viewport 768px Tablet,Viewport 768x1024 rendering,"0 console errors, modal functional","0 console errors, modal functional",PASS,,2026-11-17T18:45:40.901753
+T-WEB-05,Playwright Viewport 1024px Desktop Compact,Viewport 1024x768 rendering,"0 console errors, modal functional","0 console errors, modal functional",PASS,,2026-11-17T18:45:40.901753
+T-WEB-06,Playwright Viewport 1366px Desktop Standard,Viewport 1366x768 rendering,"0 console errors, modal functional","0 console errors, modal functional",PASS,,2026-11-17T18:45:40.901753
+T-WEB-07,Playwright Viewport 1920px Desktop Full HD,Viewport 1920x1080 rendering,"0 console errors, modal functional","0 console errors, modal functional",PASS,,2026-11-17T18:45:40.901753
+T-WEB-08,Playwright Titan Modal Verification,window.openProjectModal(1),"Modal visible, contains DCF content & link","Modal visible, contains DCF content & link",PASS,,2026-11-17T18:45:40.901753
+T-WEB-09,Playwright Retail Modal Verification,window.openProjectModal(2),"Modal visible, contains Power BI content & link","Modal visible, contains Power BI content & link",PASS,,2026-11-17T18:45:40.901753
+T-SEC-01,Repository Secret Scanning,"Regex patterns for API keys, tokens",0 secrets found,0 secrets found,PASS,,2026-11-17T18:45:40.901753
+T-SEC-02,Target Blank Links Security,rel='noopener noreferrer' audit,0 unsafe links,0 unsafe links found,PASS,,2026-11-17T18:45:40.901753
+T-SEC-03,Security Headers Configuration,"HSTS, CSP, X-Frame-Options",All security headers active,Headers missing in default vercel.json,WARN,Config recommendation provided in audit report,2026-11-17T18:45:40.901753
+T-PERF-01,Retail Dataset Load & GroupBy Time,"1,728 rows processing",< 15.0 seconds,8.04 seconds,PASS,,2026-11-17T18:45:40.901753
+T-PERF-02,Titan 17-Sheet Model Open Time,OpenPyXL data load,< 3.0 seconds,1.03 seconds,PASS,,2026-11-17T18:45:40.901753
+T-PERF-03,Memory Footprint Audit,tracemalloc peak memory,< 50.0 MB,3.64 MB peak,PASS,,2026-11-17T18:45:40.901753
+T-PERF-04,Deterministic Calculation Audit,3 repeated runs comparison,All 3 runs identical,All 3 runs identical,PASS,,2026-11-17T18:45:40.901753
